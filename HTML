@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Room: El Legado Oculto de la Gran Guerra</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon"> 
+</head>
+<body>
+    <div class="header">
+        <h1>ESCAPE ROOM: El Legado Oculto de la Gran Guerra</h1>
+        <p class="timer-display">Tiempo restante: <span id="countdown">60:00</span></p>
+    </div>
+
+    <div class="container">
+        <div id="intro-screen" class="screen active">
+            <h2>¡Bienvenidos, jóvenes historiadores!</h2>
+            <p>Vuestro abuelo, un historiador clandestino, documentó los eventos más oscuros de la Segunda Guerra Mundial en una caja fuerte secreta. Se rumorea que la caja contiene pruebas vitales y lecciones cruciales para entender el conflicto y asegurar que los horrores no se repitan jamás.</p>
+            <p>Antes de morir, la cifró con una serie de enigmas y desafíos basados en sus investigaciones.</p>
+            <p>¡Tenéis 60 minutos para resolver los acertijos y abrir la caja fuerte, revelando el legado oculto de la guerra y honrando su memoria!</p>
+            <p class="note">Para resolver los acertijos, necesitaréis consultar el documento "A Segunda Guerra Mundial".</p>
+            <a href="documento_segunda_guerra_mundial.pdf" target="_blank" class="button pdf-button">Abrir Documento de Investigación (PDF)</a>
+            <button class="button start-button" onclick="startGame()">¡Comenzar Misión!</button>
+        </div>
+
+        <div id="acertijo1" class="screen">
+            <h2>--- ACERTIJO 1: El Inicio del Cataclismo ---</h2>
+            <p class="clue-text">Pista numérica: 1ª cifra del código</p>
+            <p class="enigma-text">"El siglo XX ya había visto una Gran Guerra, pero este conflicto superó todas las expectativas. Se desencadenó por la invasión de un país al este de Europa, aplicando una táctica de 'guerra relámpago'."</p>
+            <p class="question-text">¿Cuál fue la **primera cifra del año** en que se inició esta devastadora guerra?</p>
+            <img src="images/polonia.jpg" alt="Tropas invadiendo Polonia" class="acertijo-img">
+            <input type="text" id="respuesta1" placeholder="Introduce tu respuesta (una cifra)" onkeypress="checkEnter(event, 'verificarAcertijo1')">
+            <button class="button" onclick="verificarAcertijo1()">Comprobar</button>
+            <p id="feedback1" class="feedback"></p>
+        </div>
+
+        <div id="acertijo2" class="screen">
+            <h2>--- ACERTIJO 2: El Bloque del Eje ---</h2>
+            <p class="clue-text">Pista numérica: 2ª cifra del código</p>
+            <p class="enigma-text">"Tras el 'Crack de 1929', el mundo se volvió inestable. Tres naciones poderosas se unieron para formar el 'Eje', buscando 'desquite' por la Primera Guerra Mundial."</p>
+            <p class="question-text">¿Cuántos **países principales** formaron este bloque militar?</p>
+            <img src="images/eje.jpg" alt="Líderes del Eje" class="acertijo-img">
+            <input type="text" id="respuesta2" placeholder="Introduce tu respuesta (un número)" onkeypress="checkEnter(event, 'verificarAcertijo2')">
+            <button class="button" onclick="verificarAcertijo2()">Comprobar</button>
+            <p id="feedback2" class="feedback"></p>
+        </div>
+
+        <div id="acertijo3" class="screen">
+            <h2>--- ACERTIJO 3: El Giro en el Desierto ---</h2>
+            <p class="clue-text">Pista numérica: 3ª cifra del código</p>
+            <p class="enigma-text">"Hubo un momento clave en el norte de África donde las tropas aliadas, lideradas por británicos y estadounidenses, lograron una victoria decisiva contra el ejército alemán. Esta batalla marcó un punto de inflexión."</p>
+            <p class="question-text">¿Cuál es el **número de letras** del nombre de esa batalla africana decisiva?</p>
+            <img src="images/elalamein.jpg" alt="Mapa de la batalla de El-Alamein" class="acertijo-img">
+            <input type="text" id="respuesta3" placeholder="Introduce tu respuesta (un número)" onkeypress="checkEnter(event, 'verificarAcertijo3')">
+            <button class="button" onclick="verificarAcertijo3()">Comprobar</button>
+            <p id="feedback3" class="feedback"></p>
+        </div>
+
+        <div id="acertijo4" class="screen">
+            <h2>--- ACERTIJO 4: La Caída del Imperio del Sol Naciente ---</h2>
+            <p class="clue-text">Pista numérica: 4ª cifra del código</p>
+            <p class="enigma-text">"Aunque Alemania se rindió en Europa, la guerra continuó en Asia. Los combates eran muy duros y costosos en vidas, lo que llevó a una decisión drástica para forzar la rendición de Japón."</p>
+            <p class="question-text">¿Cuál fue el **día del mes de agosto** en que se lanzó la primera bomba atómica?</p>
+            <img src="images/hiroshima.jpg" alt="Explosión de la bomba atómica" class="acertijo-img">
+            <input type="text" id="respuesta4" placeholder="Introduce tu respuesta (un número)" onkeypress="checkEnter(event, 'verificarAcertijo4')">
+            <button class="button" onclick="verificarAcertijo4()">Comprobar</button>
+            <p id="feedback4" class="feedback"></p>
+        </div>
+
+        <div id="acertijo5" class="screen">
+            <h2>--- ACERTIJO 5: El Legado de la Paz ---</h2>
+            <p class="clue-text">Pista final: Letras o palabra clave</p>
+            <p class="enigma-text">"Tras la brutalidad del conflicto, se hizo evidente la debilidad de antiguas potencias y el surgimiento de nuevas. Para evitar futuras guerras y fomentar la diplomacia, se fundó una nueva organización mundial en la Conferencia de San Francisco."</p>
+            <p class="question-text">¿Cuáles son las **tres letras iniciales** de esta organización que sustituyó a la Sociedad de Naciones?</p>
+            <img src="images/onu.jpg" alt="Sede de la ONU" class="acertijo-img">
+            <input type="text" id="respuesta5" placeholder="Introduce tu respuesta (tres letras)" onkeypress="checkEnter(event, 'verificarAcertijo5')">
+            <button class="button" onclick="verificarAcertijo5()">Comprobar</button>
+            <p id="feedback5" class="feedback"></p>
+        </div>
+
+        <div id="final-acertijo" class="screen">
+            <h2>--- ACERTIJO FINAL: La Combinación Maestra ---</h2>
+            <p>¡Lo habéis conseguido! Ahora, para abrir la caja fuerte y revelar el legado de vuestro abuelo, combinad los números y letras que habéis encontrado.</p>
+            <p>Recordad la secuencia:</p>
+            <ul class="final-clues">
+                <li>**Primera cifra:** El número del inicio del cataclismo.</li>
+                <li>**Segunda cifra:** El número de países del Bloque del Eje.</li>
+                <li>**Tercera cifra:** El número de letras de la batalla de El Giro en el Desierto.</li>
+                <li>**Cuarta cifra:** El día del lanzamiento de la bomba en la Caída del Imperio del Sol Naciente.</li>
+                <li>**Palabra clave:** Las tres letras iniciales del Legado de la Paz.</li>
+            </ul>
+            <img src="images/caja_fuerte.jpg" alt="Caja fuerte" class="acertijo-img">
+            <p>Introduce la combinación completa (ej. 1396ONU):</p>
+            <input type="text" id="respuestaFinal" placeholder="Combinación (ej. 1396ONU)" onkeypress="checkEnter(event, 'verificarCombinacionFinal')">
+            <button class="button" onclick="verificarCombinacionFinal()">Abrir Caja Fuerte</button>
+            <p id="feedbackFinal" class="feedback"></p>
+        </div>
+
+        <div id="success-screen" class="screen">
+            <h2>¡¡¡FELICIDADES!!! ¡MISIÓN CUMPLIDA!</h2>
+            <p>¡Has abierto la caja fuerte y revelado el legado oculto de la Segunda Guerra Mundial!</p>
+            <p>Tu abuelo estaría orgulloso. ¡La historia está a salvo gracias a vosotros!</p>
+            <img src="images/celebracion.jpg" alt="Celebración" class="final-img">
+        </div>
+
+        <div id="game-over-screen" class="screen">
+            <h2>¡TIEMPO AGOTADO!</h2>
+            <p>No lograste abrir la caja fuerte a tiempo.</p>
+            <p>¡Pero no te desanimes! Siempre puedes volver a intentarlo y aprender más sobre este importante periodo histórico.</p>
+            <img src="images/game_over.jpg" alt="Fin del juego" class="final-img">
+            <button class="button start-button" onclick="location.reload()">Reintentar</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
