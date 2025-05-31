@@ -18,17 +18,18 @@
             <h2>¡Bienvenidos, jóvenes historiadores!</h2>
             <p>Vuestro abuelo, un historiador clandestino, documentó los eventos más oscuros de la Segunda Guerra Mundial en una caja fuerte secreta. Se rumorea que la caja contiene pruebas vitales y lecciones cruciales para entender el conflicto y asegurar que los horrores no se repitan jamás.</p>
             <p>Antes de morir, la cifró con una serie de enigmas y desafíos basados en sus investigaciones.</p>
-            <p>¡Tenéis 60 minutos para resolver los acertijos y abrir la caja fuerte, revelando el legado oculto de la guerra y honrando su memoria!</p>
+            <p>¡Tenéis 10 minutos para resolver los acertijos y abrir la caja fuerte, revelando el legado oculto de la guerra y honrando su memoria!</p>
             <p class="note">Para resolver los acertijos, necesitaréis consultar el documento "A Segunda Guerra Mundial".</p>
             <a href="documento_segunda_guerra_mundial.pdf" target="_blank" class="button pdf-button">Abrir Documento de Investigación (PDF)</a>
             <button class="button start-button" onclick="startGame()">¡Comenzar Misión!</button>
         </div>
 
+        <!-- Acertijos y pantallas de resultado -->
         <div id="acertijo1" class="screen">
             <h2>--- ACERTIJO 1: El Inicio del Cataclismo ---</h2>
             <p class="clue-text">Pista numérica: 1ª cifra del código</p>
             <p class="enigma-text">"El siglo XX ya había visto una Gran Guerra, pero este conflicto superó todas las expectativas. Se desencadenó por la invasión de un país al este de Europa, aplicando una táctica de 'guerra relámpago'."</p>
-            <p class="question-text">¿Cuál fue la **primera cifra del año** en que se inició esta devastadora guerra?</p>
+            <p class="question-text">¿Cuál fue la <b>primera cifra del año</b> en que se inició esta devastadora guerra?</p>
             <img src="images/polonia.jpg" alt="Tropas invadiendo Polonia" class="acertijo-img">
             <input type="text" id="respuesta1" placeholder="Introduce tu respuesta (una cifra)" onkeypress="checkEnter(event, 'verificarAcertijo1')">
             <button class="button" onclick="verificarAcertijo1()">Comprobar</button>
@@ -39,7 +40,7 @@
             <h2>--- ACERTIJO 2: El Bloque del Eje ---</h2>
             <p class="clue-text">Pista numérica: 2ª cifra del código</p>
             <p class="enigma-text">"Tras el 'Crack de 1929', el mundo se volvió inestable. Tres naciones poderosas se unieron para formar el 'Eje', buscando 'desquite' por la Primera Guerra Mundial."</p>
-            <p class="question-text">¿Cuántos **países principales** formaron este bloque militar?</p>
+            <p class="question-text">¿Cuántos <b>países principales</b> formaron este bloque militar?</p>
             <img src="images/eje.jpg" alt="Líderes del Eje" class="acertijo-img">
             <input type="text" id="respuesta2" placeholder="Introduce tu respuesta (un número)" onkeypress="checkEnter(event, 'verificarAcertijo2')">
             <button class="button" onclick="verificarAcertijo2()">Comprobar</button>
@@ -50,7 +51,7 @@
             <h2>--- ACERTIJO 3: El Giro en el Desierto ---</h2>
             <p class="clue-text">Pista numérica: 3ª cifra del código</p>
             <p class="enigma-text">"Hubo un momento clave en el norte de África donde las tropas aliadas, lideradas por británicos y estadounidenses, lograron una victoria decisiva contra el ejército alemán. Esta batalla marcó un punto de inflexión."</p>
-            <p class="question-text">¿Cuál es el **número de letras** del nombre de esa batalla africana decisiva?</p>
+            <p class="question-text">¿Cuál es el <b>número de letras</b> del nombre de esa batalla africana decisiva?</p>
             <img src="images/elalamein.jpg" alt="Mapa de la batalla de El-Alamein" class="acertijo-img">
             <input type="text" id="respuesta3" placeholder="Introduce tu respuesta (un número)" onkeypress="checkEnter(event, 'verificarAcertijo3')">
             <button class="button" onclick="verificarAcertijo3()">Comprobar</button>
@@ -61,7 +62,7 @@
             <h2>--- ACERTIJO 4: La Caída del Imperio del Sol Naciente ---</h2>
             <p class="clue-text">Pista numérica: 4ª cifra del código</p>
             <p class="enigma-text">"Aunque Alemania se rindió en Europa, la guerra continuó en Asia. Los combates eran muy duros y costosos en vidas, lo que llevó a una decisión drástica para forzar la rendición de Japón."</p>
-            <p class="question-text">¿Cuál fue el **día del mes de agosto** en que se lanzó la primera bomba atómica?</p>
+            <p class="question-text">¿Cuál fue el <b>día del mes de agosto</b> en que se lanzó la primera bomba atómica?</p>
             <img src="images/hiroshima.jpg" alt="Explosión de la bomba atómica" class="acertijo-img">
             <input type="text" id="respuesta4" placeholder="Introduce tu respuesta (un número)" onkeypress="checkEnter(event, 'verificarAcertijo4')">
             <button class="button" onclick="verificarAcertijo4()">Comprobar</button>
@@ -72,7 +73,7 @@
             <h2>--- ACERTIJO 5: El Legado de la Paz ---</h2>
             <p class="clue-text">Pista final: Letras o palabra clave</p>
             <p class="enigma-text">"Tras la brutalidad del conflicto, se hizo evidente la debilidad de antiguas potencias y el surgimiento de nuevas. Para evitar futuras guerras y fomentar la diplomacia, se fundó una nueva organización mundial en la Conferencia de San Francisco."</p>
-            <p class="question-text">¿Cuáles son las **tres letras iniciales** de esta organización que sustituyó a la Sociedad de Naciones?</p>
+            <p class="question-text">¿Cuáles son las <b>tres letras iniciales</b> de esta organización que sustituyó a la Sociedad de Naciones?</p>
             <img src="images/onu.jpg" alt="Sede de la ONU" class="acertijo-img">
             <input type="text" id="respuesta5" placeholder="Introduce tu respuesta (tres letras)" onkeypress="checkEnter(event, 'verificarAcertijo5')">
             <button class="button" onclick="verificarAcertijo5()">Comprobar</button>
@@ -84,11 +85,11 @@
             <p>¡Lo habéis conseguido! Ahora, para abrir la caja fuerte y revelar el legado de vuestro abuelo, combinad los números y letras que habéis encontrado.</p>
             <p>Recordad la secuencia:</p>
             <ul class="final-clues">
-                <li>**Primera cifra:** El número del inicio del cataclismo.</li>
-                <li>**Segunda cifra:** El número de países del Bloque del Eje.</li>
-                <li>**Tercera cifra:** El número de letras de la batalla de El Giro en el Desierto.</li>
-                <li>**Cuarta cifra:** El día del lanzamiento de la bomba en la Caída del Imperio del Sol Naciente.</li>
-                <li>**Palabra clave:** Las tres letras iniciales del Legado de la Paz.</li>
+                <li><b>Primera cifra:</b> El número del inicio del cataclismo.</li>
+                <li><b>Segunda cifra:</b> El número de países del Bloque del Eje.</li>
+                <li><b>Tercera cifra:</b> El número de letras de la batalla de El Giro en el Desierto.</li>
+                <li><b>Cuarta cifra:</b> El día del lanzamiento de la bomba en la Caída del Imperio del Sol Naciente.</li>
+                <li><b>Palabra clave:</b> Las tres letras iniciales del Legado de la Paz.</li>
             </ul>
             <img src="images/caja_fuerte.jpg" alt="Caja fuerte" class="acertijo-img">
             <p>Introduce la combinación completa (ej. 1396ONU):</p>
@@ -111,9 +112,7 @@
             <img src="images/game_over.jpg" alt="Fin del juego" class="final-img">
             <button class="button start-button" onclick="location.reload()">Reintentar</button>
         </div>
-
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>

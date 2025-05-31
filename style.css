@@ -1,6 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to right, #4b6cb7, #182848); /* Gradiente suave */
+    background: linear-gradient(to right, #4b6cb7, #182848);
     color: #f4f4f4;
     line-height: 1.6;
     padding: 20px;
@@ -24,12 +24,12 @@ body {
 }
 
 h1 {
-    color: #ffd700; /* Oro */
+    color: #ffd700;
     margin-bottom: 5px;
 }
 
 h2 {
-    color: #add8e6; /* Azul claro */
+    color: #add8e6;
     border-bottom: 2px solid #add8e6;
     padding-bottom: 10px;
     margin-bottom: 20px;
@@ -42,18 +42,18 @@ h2 {
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-    color: #333; /* Texto oscuro para el contenedor */
+    color: #333;
     text-align: center;
     box-sizing: border-box;
-    flex-grow: 1; /* Permite que el contenedor crezca */
+    flex-grow: 1;
 }
 
 .screen {
-    display: none; /* Oculta todas las pantallas por defecto */
+    display: none;
 }
 
 .screen.active {
-    display: block; /* Muestra la pantalla activa */
+    display: block;
 }
 
 .note {
@@ -65,7 +65,7 @@ h2 {
 
 .button {
     padding: 12px 25px;
-    background-color: #007bff; /* Azul vibrante */
+    background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
@@ -73,8 +73,8 @@ h2 {
     font-size: 1.1em;
     margin-top: 20px;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    text-decoration: none; /* Para los enlaces que parecen botones */
-    display: inline-block; /* Para que los enlaces se parezcan a botones */
+    text-decoration: none;
+    display: inline-block;
 }
 
 .button:hover {
@@ -83,7 +83,7 @@ h2 {
 }
 
 .pdf-button {
-    background-color: #dc3545; /* Rojo para PDF */
+    background-color: #dc3545;
     margin-right: 15px;
 }
 .pdf-button:hover {
@@ -91,7 +91,7 @@ h2 {
 }
 
 .start-button {
-    background-color: #28a745; /* Verde para iniciar */
+    background-color: #28a745;
 }
 .start-button:hover {
     background-color: #218838;
@@ -102,7 +102,7 @@ h2 {
     height: auto;
     border-radius: 8px;
     margin: 25px auto;
-    display: block; /* Centrar imagen */
+    display: block;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -112,7 +112,7 @@ input[type="text"] {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1em;
-    width: calc(100% - 150px); /* Ajusta el ancho para el botón */
+    width: calc(100% - 150px);
     max-width: 300px;
     box-sizing: border-box;
 }
@@ -124,11 +124,11 @@ input[type="text"] {
 }
 
 .feedback.correct {
-    color: #28a745; /* Verde */
+    color: #28a745;
 }
 
 .feedback.incorrect {
-    color: #dc3545; /* Rojo */
+    color: #dc3545;
 }
 
 .timer-display {
@@ -158,7 +158,7 @@ input[type="text"] {
         max-width: 95%;
     }
     input[type="text"] {
-        width: calc(100% - 20px); /* Ocupa casi todo el ancho */
+        width: calc(100% - 20px);
         margin-right: 0;
         margin-bottom: 15px;
     }
